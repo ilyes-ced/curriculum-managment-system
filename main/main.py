@@ -439,20 +439,20 @@ class MainWindow(QMainWindow):
         name = self.sender().objectName()
         if name == 'btn_all':
             self.ui.stackedWidget.setCurrentIndex(0)
-            self.ui.btn_all.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
-            self.ui.btn_classes.setStyleSheet('border: none ;color:white;')
-            self.ui.btn_teachers.setStyleSheet('border: none ;color:white;')
+            self.ui.btn_all.setStyleSheet('border-left: 3px solid #04eeff;')
+            self.ui.btn_classes.setStyleSheet('border: none;')
+            self.ui.btn_teachers.setStyleSheet('border: none;')
 
         elif name == 'btn_teachers':
             self.ui.stackedWidget.setCurrentIndex(2)
-            self.ui.btn_all.setStyleSheet('border: none;color:white;')
-            self.ui.btn_classes.setStyleSheet('border: none;color:white;')
-            self.ui.btn_teachers.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
+            self.ui.btn_all.setStyleSheet('border: none;')
+            self.ui.btn_classes.setStyleSheet('border: none;')
+            self.ui.btn_teachers.setStyleSheet('border-left: 3px solid #04eeff;')
         elif name == 'btn_classes':
             self.ui.stackedWidget.setCurrentIndex(1)
-            self.ui.btn_all.setStyleSheet('border: none;color:white;')
-            self.ui.btn_classes.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
-            self.ui.btn_teachers.setStyleSheet('border: none;color:white;')
+            self.ui.btn_all.setStyleSheet('border: none;')
+            self.ui.btn_classes.setStyleSheet('border-left: 3px solid #04eeff;')
+            self.ui.btn_teachers.setStyleSheet('border: none;')
 
 
 
