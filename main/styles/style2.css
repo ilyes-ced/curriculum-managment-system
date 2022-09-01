@@ -1,0 +1,87 @@
+#widget{
+	/*background-color: rgba(35,36,57,0.8);*/
+	background-color: rgba(35,36,57,1);
+	border: 1px solid #04eeff;
+	border-radius: 10px;
+
+}
+
+#comboBox> *[text="Cancel"] {
+    background: red;
+}
+
+QLabel{
+	color:white;
+}
+
+#widget_3,#widget_4,
+#widget_5,
+#widget_6{
+	border-bottom: 1px solid #04eeff;
+}
+#widget_8{
+	border-top: 1px solid #04eeff;
+
+}
+
+#btn_close{
+	background-color: red;
+	border-radius: 10px;
+}
+
+#label_6,
+#label_7,
+#label_8,
+#label_9{
+	color : gray
+}
+
+
+
+#pushButton{
+	background-color: #04eeff;
+	border: 1px #04eeff solid;
+	border-radius: 2px;
+	color : white;
+}
+
+#pushButton_2{
+	background-color: transparent;
+	border: 1px solid #04eeff ;
+	border-radius: 2px;
+	color : white;
+
+}
+
+
+QComboBox{
+	background-color: transparent;
+	border: 1px solid #04eeff ;
+	border-radius: 2px;
+	color : white;
+
+}
+
+
+
+QListView::item {
+	background-color: rgba(35,36,57,0.8);
+	color : white;
+}
+QListView::item:hover {
+	background: #04eeff;
+}
+
+
+#pushButton_2:hover{
+	background-color: #fe2da3;
+	
+
+}
+
+#pushButton:hover{
+	background-color: white;
+	border: 1px solid #04eeff ;
+	color:black;
+
+}

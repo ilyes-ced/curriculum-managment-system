@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'test_designkEUlPi.ui'
+## Form generated from reading UI file 'test_designRIvpfV.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -12,7 +12,6 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 
-import resources_rc
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -78,19 +77,11 @@ class Ui_MainWindow(object):
         self.widget_11 = QWidget(self.widget_2)
         self.widget_11.setObjectName(u"widget_11")
         self.widget_11.setMinimumSize(QSize(60, 0))
-        self.widget_11.setMaximumSize(QSize(16777215, 270))
+        self.widget_11.setMaximumSize(QSize(16777215, 225))
         self.verticalLayout_9 = QVBoxLayout(self.widget_11)
         self.verticalLayout_9.setSpacing(0)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
-        self.btn_extend = QPushButton(self.widget_11)
-        self.btn_extend.setObjectName(u"btn_extend")
-        self.btn_extend.setMinimumSize(QSize(60, 45))
-        self.btn_extend.setMaximumSize(QSize(60, 45))
-        self.btn_extend.setSizeIncrement(QSize(0, 0))
-
-        self.verticalLayout_9.addWidget(self.btn_extend)
-
         self.btn_all = QPushButton(self.widget_11)
         self.btn_all.setObjectName(u"btn_all")
         self.btn_all.setEnabled(True)
@@ -2871,7 +2862,6 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
-        self.btn_extend.setText("")
         self.btn_all.setText("")
         self.btn_classes.setText("")
         self.btn_teachers.setText("")

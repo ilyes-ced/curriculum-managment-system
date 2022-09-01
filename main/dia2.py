@@ -19,7 +19,7 @@ class Ui_Dialog(object):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(400, 430)
-        Dialog.setStyleSheet(open(r"C:\my_projects\python_projects\style2.css").read())
+        Dialog.setStyleSheet(open(r"C:\my_projects\python\project1\main\style2.css").read())
         Dialog.setWindowFlags(Qt.FramelessWindowHint)
         Dialog.setAttribute(Qt.WA_TranslucentBackground)
 
@@ -172,7 +172,7 @@ class Ui_Dialog(object):
         self.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).click()
 
     def changed_teacher(self):
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from teachers where name=?",(self.comboBox.currentText(),))
         teachers = cur.fetchone()

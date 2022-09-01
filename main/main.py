@@ -28,11 +28,11 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
         global widgets
         widgets = self.ui
-        #styling
-        self.ui.the_main_bloc.setStyleSheet(open(r"C:\my_projects\python_projects\style.css").read())
+        #styling  C:\my_projects\python\project1\main
+        self.ui.the_main_bloc.setStyleSheet(open(r"C:\my_projects\python\project1\main\styles\style.css").read())
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setWindowIcon(QIcon(r'C:\my_projects\python_projects\images\icons\python.svg'))
+        self.setWindowIcon(QIcon(r'C:\my_projects\python\project1\main\images\python.svg'))
         #blur effect
         hWnd = self.winId()
         blur(hWnd)
@@ -86,7 +86,7 @@ class MainWindow(QMainWindow):
 
 
         #create databse tables in case of new programe
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\db.sqlite")
         tables = con.cursor()
         tables.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='reservations' ''')
         if tables.fetchone()[0]!=1: 
@@ -313,7 +313,7 @@ class MainWindow(QMainWindow):
             self.findChild(QPushButton,self.sender().objectName()).hide()
             tt = self.sender().text()
             text = tt.split(' | ')
-            con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+            con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
             cur = con.cursor()
             cur.execute('SELECT id from teachers where name=?',(text[0],))
             teacher_id = cur.fetchone()[0]
@@ -328,7 +328,7 @@ class MainWindow(QMainWindow):
                 if ff[i]['teacher']==teacher_id and ff[i]['subject']==text[1] and ff[i]['class']==text[2]:
                     second.remove(ff[i])
                     sett = json.dumps(second)
-                    con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+                    con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
                     cur = con.cursor()
                     sql = "UPDATE reservations SET cell_"+str(number)+"=? WHERE season=? AND grade=? AND cell_"+str(number)+"=?"
                     cur.execute(sql, (sett,self.season_selection.currentText(),self.grade_selection.currentText(),where))
@@ -404,7 +404,7 @@ class MainWindow(QMainWindow):
                 for k in range((i*5)-4,(i*5)+1):
                     exec("row_"+str(math.floor((int(k)-1)/5)+1)+".append(self.ui.square_"+str(k)+".text())")
 
-            with open('C:\my_projects\python_projects\my_new_data.csv', 'w', encoding='UTF8') as f:
+            with open('C:\my_projects\python\project1\main\my_new_data.csv', 'w', encoding='UTF8') as f:
                 writer = csv.writer(f)
                 for i in range(11):
                     exec("print(row_"+str(i)+")")
@@ -418,7 +418,7 @@ class MainWindow(QMainWindow):
                     exec("row_"+str(math.floor((int(k)-1)/5)+1)+".append(self.ui.box_"+str(k)+".text())")
 
             
-            with open('C:\my_projects\python_projects\my_new_data.csv', 'w', encoding='UTF8') as f:
+            with open('C:\my_projects\python\project1\main\my_new_data.csv', 'w', encoding='UTF8') as f:
                 writer = csv.writer(f)
                 for i in range(11):
                     exec("writer.writerow(row_"+str(i)+")")
@@ -440,19 +440,19 @@ class MainWindow(QMainWindow):
         if name == 'btn_all':
             self.ui.stackedWidget.setCurrentIndex(0)
             self.ui.btn_all.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
-            #self.ui.btn_classes.setStyleSheet('border-left: none ;color:white;')
-            #self.ui.btn_teachers.setStyleSheet('border-left: none ;color:white;')
+            self.ui.btn_classes.setStyleSheet('border: none ;color:white;')
+            self.ui.btn_teachers.setStyleSheet('border: none ;color:white;')
 
         elif name == 'btn_teachers':
             self.ui.stackedWidget.setCurrentIndex(2)
-            #self.ui.btn_all.setStyleSheet('border-left: none;color:white;')
-            #self.ui.btn_classes.setStyleSheet('border-left: none;color:white;')
+            self.ui.btn_all.setStyleSheet('border: none;color:white;')
+            self.ui.btn_classes.setStyleSheet('border: none;color:white;')
             self.ui.btn_teachers.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
         elif name == 'btn_classes':
             self.ui.stackedWidget.setCurrentIndex(1)
-            #self.ui.btn_all.setStyleSheet('border-left: none;color:white;')
+            self.ui.btn_all.setStyleSheet('border: none;color:white;')
             self.ui.btn_classes.setStyleSheet('border-left: 3px solid #04eeff;color: #04eeff;')
-            #self.ui.btn_teachers.setStyleSheet('border-left: none;color:white;')
+            self.ui.btn_teachers.setStyleSheet('border: none;color:white;')
 
 
 
@@ -467,7 +467,7 @@ class MainWindow(QMainWindow):
         year_class = self.ui.tab3_yearclass_selection.currentText()
         year = year_class.split(" | ")[0]
         classe = year_class.split(" | ")[1]
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from reservations where season=? AND grade=? ",(season,year))
         classes = cur.fetchall()
@@ -494,7 +494,7 @@ class MainWindow(QMainWindow):
     def fill_teacher_table(self):
         season = self.ui.tab2_season_selection.currentText()
         teacher = self.ui.tab2_teacher_selection.currentText()
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from reservations where season='%s'" % season)
         classes = cur.fetchall()
@@ -535,7 +535,7 @@ class MainWindow(QMainWindow):
 
 
     def get_teacher(self,id):
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from teachers where id='%s'" % id)
         teacher = cur.fetchone()
@@ -640,7 +640,7 @@ class MainWindow(QMainWindow):
         self.window.show()
         ######################
         #self.ui.pushButton_2.clicked.connect(lambda :self.window.hide())
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from teachers")
         teachers = cur.fetchall()
@@ -778,7 +778,7 @@ class MainWindow(QMainWindow):
             self.add_button = 'add_cell_'+str(i+1)
             self.cell = self.findChild(QVBoxLayout,"list_"+str(i+1))
 
-            con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+            con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
             cur = con.cursor()
        
             sql = ("""select * from reservations where season = ? and grade = ?""")
@@ -859,7 +859,7 @@ class MainWindow(QMainWindow):
 
     #adds the reservations to DB
     def changes(self,teacher,subject,classe):
-        con = sqlite3.connect(r"C:\my_projects\python_projects\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         sql = ("select cell_"+self.index+" from reservations where season = ? and grade = ?")
         s = (self.season_selection.currentText())

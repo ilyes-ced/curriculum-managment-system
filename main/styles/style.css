@@ -1,0 +1,580 @@
+
+
+QScrollBar:vertical {
+	border: none;
+    background: transparent;
+    width: 6px;
+    margin: 0px 0 10px 0;
+	border-radius: 0px;
+ }
+
+/*  HANDLE BAR VERTICAL */
+QScrollBar::handle:vertical {	
+	background-color: rgba(255,255,255,0.1);;
+	min-height: 30px;
+	border-radius: 7px;
+}
+QScrollBar::handle:vertical:hover{	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::handle:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* BTN TOP - SCROLLBAR */
+QScrollBar::sub-line:vertical {
+
+	background-color: transparent;
+	height: 0px;
+	border-top-left-radius: 7px;
+	border-top-right-radius: 7px;
+	subcontrol-position: top;
+	subcontrol-origin: margin;
+}
+QScrollBar::sub-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::sub-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* BTN BOTTOM - SCROLLBAR */
+QScrollBar::add-line:vertical {
+	border: none;
+
+	background-color: transparent;
+	height: 0px;
+	border-bottom-right-radius: 4px;
+	subcontrol-position: bottom;
+	subcontrol-origin: margin;
+}
+QScrollBar::add-line:vertical:hover {	
+	background-color: rgb(255, 0, 127);
+}
+QScrollBar::add-line:vertical:pressed {	
+	background-color: rgb(185, 0, 92);
+}
+
+/* RESET ARROW */
+QScrollBar::up-arrow:vertical, QScrollBar::down-arrow:vertical {
+	background: none;
+}
+QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
+	background: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#btn_close{
+	background-color: red;
+	border-radius: 10px;
+}
+#btn_max{
+	background-color: yellow;
+	border-radius: 10px;
+	
+}
+#btn_min{
+	background-color: green;
+	border-radius: 10px;
+	
+}
+
+
+
+
+#logo_widget{
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/python.svg");   
+	background-color: transparent;
+}
+#btn_save{
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/save.svg");   
+	background-color: transparent;
+	border: none;
+
+}
+QPushButton#btn_all{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/home.svg");   
+	border:none;
+}
+QPushButton#btn_extend{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/items.svg");   
+	border: none;
+}
+QPushButton#btn_classes{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/class.svg");   
+	border: none;
+	color : #04eeff;	
+}
+QPushButton#btn_teachers{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/teacher.svg");   
+	border: none;
+	color : #04eeff;	
+}
+QPushButton#btn_settings{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/settings.svg");   
+	border: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+QPushButton#btn_all:hover,
+QPushButton#btn_classes:hover,
+QPushButton#btn_teachers:hover,
+QPushButton#btn_save:hover,
+QPushButton#btn_settings:hover,
+QPushButton#btn_extend:hover{
+	
+	border-left : 3px solid #04eeff;
+}
+
+
+
+
+
+#scrollArea,#scrollAreaWidgetContents{
+	background-color: transparent;
+	border:none;
+}
+QPushButton{
+	background-color: transparent ;
+}
+
+
+*{
+	color:white;
+}
+
+QMainWindow{
+	background-color: black;
+}
+
+
+
+
+#footer,#title_bar,#stackedWidget{	
+	background-color: rgba(24, 25, 67, 0.745);
+}
+
+#side_bar{
+	/*background-color: #202443;*/
+
+	background-color: rgba(35,36,57,0.8);
+	border-right: 1px solid #04eeff
+}
+
+#main_frame{
+	
+}
+	
+
+
+
+
+
+
+QComboBox{
+	border-radius: 10px;
+	background-color: rgba(35,36,57,0.8);
+	border: 1px solid #04eeff;
+}
+
+
+QListView::item {
+	background-color: rgba(35,36,57,0.8);
+	
+}
+QListView::item:hover {
+	background: #04eeff;
+}
+/*
+QComboBox#linestylecbox::down-arrow 
+{
+	background-image: url("C:/my_projects/python/project1/main/images/settings.svg");
+	width: 10px;
+	height: 10px;
+	border: 0px;
+}*/
+
+
+QComboBox::down-arrow {
+	background-color: transparent;
+    image: url("C:/my_projects/python/project1/main/images/arrow.svg");
+    width: 14px;
+    height: 14px;
+	
+}
+
+
+#class_table_widget,#teacher_table_widget,#all_table_widget{
+	background-color: rgba(35,36,57,0.8);
+	border: 1px solid #04eeff;
+	border-radius: 10px;
+}
+/*
+#the_main_bloc{
+	background-color: black;
+}*/
+#top_bar,
+#pushButton_15,
+#pushButton_16,
+#pushButton_17,
+#pushButton_18,
+#pushButton_19,
+#pushButton_63,
+#pushButton_22,
+#pushButton_24,
+#pushButton_25,
+#pushButton_26,
+#pushButton_27,
+#pushButton_64
+{
+	border: solid #04eeff;
+	border-width : 0px 0px 1px 0px;
+}
+
+
+
+#time_slot_box,
+#time_slot_box_2,
+#time_slot_box_3,
+#time_slot_box_4,
+#time_slot_box_5,
+#time_slot_box_6,
+#time_slot_box_7,
+#time_slot_box_8{
+	border: solid #04eeff;
+	border-width : 0px 1px 1px 0px;
+}
+
+#time_slot_box_9{
+	border: solid #04eeff;
+	border-width : 0px 1px 0px 0px;
+}
+
+
+
+#cell_1,
+#cell_2,
+#cell_3,
+#cell_4,
+#cell_5,
+#cell_6,
+#cell_7,
+#cell_8,
+#cell_9,
+#cell_10,
+#cell_11,
+#cell_12,
+#cell_13,
+#cell_14,
+#cell_15,
+#cell_16,
+#cell_17,
+#cell_18,
+#cell_19,
+#cell_20,
+#cell_21,
+#cell_22,
+#cell_23,
+#cell_24,
+#cell_25,
+#cell_26,
+#cell_27,
+#cell_28,
+#cell_29,
+#cell_30,
+#cell_31,
+#cell_32,
+#cell_33,
+#cell_34,
+#cell_35,
+#cell_36,
+#cell_37,
+#cell_38,
+#cell_39,
+#cell_40,
+#cell_41,
+#cell_42,
+#cell_43,
+#cell_44,
+#cell_45,
+#square_1,
+#square_2,
+#square_3,
+#square_4,
+#square_5,
+#square_6,
+#square_7,
+#square_8,
+#square_9,
+#square_10,
+#square_11,
+#square_12,
+#square_13,
+#square_14,
+#square_15,
+#square_16,
+#square_17,
+#square_18,
+#square_19,
+#square_20,
+#square_21,
+#square_22,
+#square_23,
+#square_24,
+#square_25,
+#square_26,
+#square_27,
+#square_28,
+#square_29,
+#square_30,
+#square_31,
+#square_32,
+#square_33,
+#square_34,
+#square_35,
+#square_36,
+#square_37,
+#square_38,
+#square_39,
+#square_40,
+#box_1,
+#box_2,
+#box_3,
+#box_4,
+#box_5,
+#box_6,
+#box_7,
+#box_8,
+#box_9,
+#box_10,
+#box_11,
+#box_12,
+#box_13,
+#box_14,
+#box_15,
+#box_16,
+#box_17,
+#box_18,
+#box_19,
+#box_20,
+#box_21,
+#box_22,
+#box_23,
+#box_24,
+#box_25,
+#box_26,
+#box_27,
+#box_28,
+#box_29,
+#box_30,
+#box_31,
+#box_32,
+#box_33,
+#box_34,
+#box_35,
+#box_36,
+#box_37,
+#box_38,
+#box_39,
+#box_40,
+#pushButton_20,
+#pushButton_21,
+#pushButton_23,
+#pushButton_28,
+#pushButton_33,
+#pushButton_53,
+#pushButton_48,
+#pushButton_43,
+#pushButton_29,
+#pushButton_30,
+#pushButton_31,
+#pushButton_32,
+#pushButton_34,
+#pushButton_54,
+#pushButton_49,
+#pushButton_44,
+#pushButton_39,
+#pushButton_69,
+#pushButton_68,
+#pushButton_67,
+#pushButton_66,
+#pushButton_65,
+#pushButton_81
+{
+	
+
+	border: solid #04eeff;
+	border-width : 0px 0px 1px 0px;
+}
+#side_bar{
+	border: 1px solid #04eeff;
+
+}
+#footer{
+	border-bottom: 1px solid #04eeff;
+
+}
+#main_widget,#stackedWidget,#footer,#title_bar{
+	border-right: 1px solid #04eeff;
+
+}
+#title_bar{
+	border-top: 1px solid #04eeff;
+
+}
+/*
+#the_main_bloc{
+	border-radius: 100px;
+
+}
+#widget_3{
+	border-bottom-right-radius: 10px;
+
+}
+#side_bar{
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+
+}
+
+
+#the_main_bloc{
+	border: 1px solid #04eeff;
+
+}
+
+#widget_12,#footer,#widget_10,#widget_4,#frame_6,#title_bar{
+	border-radius: 10px;
+
+}*/
+
+
+
+QComboBox::drop-down{
+	border : 0px;
+	padding : 20px;
+}
+#season_selection::drop-down,#tab2_season_selection::drop-down,#tab3_season_selection::drop-down{
+	margin-right: 20px;
+}
+
+#grade_selection::drop-down,#tab2_teacher_selection::drop-down,#tab3_yearclass_selection::drop-down{
+	margin-left: 20px;
+}
+
+
+
+
+
+
+
+
+#add_cell_1:hover,
+#add_cell_2:hover,
+#add_cell_3:hover,
+#add_cell_4:hover,
+#add_cell_5:hover,
+#add_cell_6:hover,
+#add_cell_7:hover,
+#add_cell_8:hover,
+#add_cell_9:hover,
+#add_cell_10:hover,
+#add_cell_11:hover,
+#add_cell_12:hover,
+#add_cell_13:hover,
+#add_cell_14:hover,
+#add_cell_15:hover,
+#add_cell_16:hover,
+#add_cell_17:hover,
+#add_cell_18:hover,
+#add_cell_19:hover,
+#add_cell_20:hover,
+#add_cell_21:hover,
+#add_cell_22:hover,
+#add_cell_23:hover,
+#add_cell_24:hover,
+#add_cell_25:hover,
+#add_cell_26:hover,
+#add_cell_27:hover,
+#add_cell_28:hover,
+#add_cell_29:hover,
+#add_cell_30:hover,
+#add_cell_31:hover,
+#add_cell_32:hover,
+#add_cell_33:hover,
+#add_cell_34:hover,
+#add_cell_35:hover,
+#add_cell_36:hover,
+#add_cell_37:hover,
+#add_cell_38:hover,
+#add_cell_39:hover,
+#add_cell_40:hover,
+#add_cell_41:hover,
+#add_cell_42:hover,
+#add_cell_43:hover,
+#add_cell_44:hover,
+#add_cell_45:hover{
+	color:#fe2da3;
+	font-size: 14px;
+	border : 2px solid #fe2da3;
+}
+
+
+
+/*
+#the_main_bloc{
+	background-color: #fff;
+}
+*/
