@@ -19,7 +19,7 @@ class Ui_Dialog(object):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(400, 430)
-        Dialog.setStyleSheet(open(r"C:\my_projects\python\project1\main\style2.css").read())
+        Dialog.setStyleSheet(open(r"C:\my_projects\python\project1\main\styles\style2.css").read())
         Dialog.setWindowFlags(Qt.FramelessWindowHint)
         Dialog.setAttribute(Qt.WA_TranslucentBackground)
 

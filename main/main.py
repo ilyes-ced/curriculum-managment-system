@@ -86,7 +86,7 @@ class MainWindow(QMainWindow):
 
 
         #create databse tables in case of new programe
-        con = sqlite3.connect(r"C:\my_projects\python\project1\main\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         tables = con.cursor()
         tables.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='reservations' ''')
         if tables.fetchone()[0]!=1: 
