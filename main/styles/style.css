@@ -158,6 +158,13 @@ QPushButton#btn_settings{
 	border: none;
 }
 
+QPushButton#btn_edit_teachers{	
+	background-origin: content;
+	background-repeat: no-repeat;
+	background-position: center middle;
+	background-image: url("C:/my_projects/python/project1/main/images/edit.svg");   
+	border: none;
+}
 
 
 
@@ -173,7 +180,8 @@ QPushButton#btn_classes:hover,
 QPushButton#btn_teachers:hover,
 QPushButton#btn_save:hover,
 QPushButton#btn_settings:hover,
-QPushButton#btn_extend:hover{
+QPushButton#btn_extend:hover,
+QPushButton#btn_edit_teachers:hover{
 	
 	border-left : 3px solid #04eeff;
 }
@@ -578,3 +586,33 @@ QComboBox::drop-down{
 	background-color: #fff;
 }
 */
+
+
+
+
+QHeaderView::section {
+    background-color: #646464;
+    padding: 4px;
+    font-size: 14pt;
+    border-style: none;
+    border-bottom: 1px solid #fffff8;
+    border-right: 1px solid #fffff8;
+}
+
+QHeaderView::section:horizontal
+{
+    border-top: 1px solid #fffff8;
+}
+
+QHeaderView::section:vertical
+{
+    border-left: 1px solid #fffff8;
+}
+
+
+
+#widget16, #widget17, #widget18{
+	background-color: rgba(35,36,57,0.8);
+	border: 1px solid #04eeff;
+	border-radius: 10px;
+}

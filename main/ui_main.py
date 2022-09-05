@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'test_designRIvpfV.ui'
+## Form generated from reading UI file 'ui_filejtaVxw.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -77,11 +77,19 @@ class Ui_MainWindow(object):
         self.widget_11 = QWidget(self.widget_2)
         self.widget_11.setObjectName(u"widget_11")
         self.widget_11.setMinimumSize(QSize(60, 0))
-        self.widget_11.setMaximumSize(QSize(16777215, 225))
+        self.widget_11.setMaximumSize(QSize(16777215, 315))
         self.verticalLayout_9 = QVBoxLayout(self.widget_11)
         self.verticalLayout_9.setSpacing(0)
         self.verticalLayout_9.setObjectName(u"verticalLayout_9")
         self.verticalLayout_9.setContentsMargins(0, 0, 0, 0)
+        self.btn_extend = QPushButton(self.widget_11)
+        self.btn_extend.setObjectName(u"btn_extend")
+        self.btn_extend.setMinimumSize(QSize(60, 45))
+        self.btn_extend.setMaximumSize(QSize(60, 45))
+        self.btn_extend.setSizeIncrement(QSize(0, 0))
+
+        self.verticalLayout_9.addWidget(self.btn_extend)
+
         self.btn_all = QPushButton(self.widget_11)
         self.btn_all.setObjectName(u"btn_all")
         self.btn_all.setEnabled(True)
@@ -104,6 +112,18 @@ class Ui_MainWindow(object):
 
         self.verticalLayout_9.addWidget(self.btn_teachers)
 
+        self.btn_edit_teachers = QPushButton(self.widget_11)
+        self.btn_edit_teachers.setObjectName(u"btn_edit_teachers")
+        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
+        sizePolicy2.setHorizontalStretch(0)
+        sizePolicy2.setVerticalStretch(0)
+        sizePolicy2.setHeightForWidth(self.btn_edit_teachers.sizePolicy().hasHeightForWidth())
+        self.btn_edit_teachers.setSizePolicy(sizePolicy2)
+        self.btn_edit_teachers.setMinimumSize(QSize(60, 45))
+        self.btn_edit_teachers.setMaximumSize(QSize(60, 45))
+
+        self.verticalLayout_9.addWidget(self.btn_edit_teachers)
+
         self.btn_save = QPushButton(self.widget_11)
         self.btn_save.setObjectName(u"btn_save")
         self.btn_save.setMinimumSize(QSize(60, 45))
@@ -114,9 +134,6 @@ class Ui_MainWindow(object):
 
         self.btn_settings = QPushButton(self.widget_11)
         self.btn_settings.setObjectName(u"btn_settings")
-        sizePolicy2 = QSizePolicy(QSizePolicy.Minimum, QSizePolicy.Fixed)
-        sizePolicy2.setHorizontalStretch(0)
-        sizePolicy2.setVerticalStretch(0)
         sizePolicy2.setHeightForWidth(self.btn_settings.sizePolicy().hasHeightForWidth())
         self.btn_settings.setSizePolicy(sizePolicy2)
         self.btn_settings.setMinimumSize(QSize(60, 45))
@@ -2792,6 +2809,113 @@ class Ui_MainWindow(object):
         self.gridLayout_7.addWidget(self.teacher_page_frame, 0, 0, 1, 1)
 
         self.stackedWidget.addWidget(self.teachers_table)
+        self.page = QWidget()
+        self.page.setObjectName(u"page")
+        self.gridLayout_14 = QGridLayout(self.page)
+        self.gridLayout_14.setSpacing(0)
+        self.gridLayout_14.setObjectName(u"gridLayout_14")
+        self.gridLayout_14.setContentsMargins(0, 0, 0, 0)
+        self.frame_2 = QFrame(self.page)
+        self.frame_2.setObjectName(u"frame_2")
+        self.frame_2.setFrameShape(QFrame.StyledPanel)
+        self.frame_2.setFrameShadow(QFrame.Raised)
+        self.gridLayout_16 = QGridLayout(self.frame_2)
+        self.gridLayout_16.setSpacing(20)
+        self.gridLayout_16.setObjectName(u"gridLayout_16")
+        self.gridLayout_16.setContentsMargins(40, 40, 40, 40)
+        self.widget_16 = QWidget(self.frame_2)
+        self.widget_16.setObjectName(u"widget_16")
+        self.gridLayout_15 = QGridLayout(self.widget_16)
+        self.gridLayout_15.setObjectName(u"gridLayout_15")
+        self.gridLayout_15.setContentsMargins(10, 10, 10, 10)
+        self.horizontalSlider_2 = QSlider(self.widget_16)
+        self.horizontalSlider_2.setObjectName(u"horizontalSlider_2")
+        self.horizontalSlider_2.setMaximum(255)
+        self.horizontalSlider_2.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.horizontalSlider_2, 3, 0, 1, 2)
+
+        self.pushButton_3 = QPushButton(self.widget_16)
+        self.pushButton_3.setObjectName(u"pushButton_3")
+
+        self.gridLayout_15.addWidget(self.pushButton_3, 5, 0, 1, 1)
+
+        self.horizontalSlider_3 = QSlider(self.widget_16)
+        self.horizontalSlider_3.setObjectName(u"horizontalSlider_3")
+        self.horizontalSlider_3.setMaximum(255)
+        self.horizontalSlider_3.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.horizontalSlider_3, 4, 0, 1, 2)
+
+        self.pushButton_2 = QPushButton(self.widget_16)
+        self.pushButton_2.setObjectName(u"pushButton_2")
+
+        self.gridLayout_15.addWidget(self.pushButton_2, 5, 1, 1, 1)
+
+        self.horizontalSlider = QSlider(self.widget_16)
+        self.horizontalSlider.setObjectName(u"horizontalSlider")
+        self.horizontalSlider.setMaximum(255)
+        self.horizontalSlider.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.horizontalSlider, 2, 0, 1, 2)
+
+        self.lineEdit_2 = QLineEdit(self.widget_16)
+        self.lineEdit_2.setObjectName(u"lineEdit_2")
+
+        self.gridLayout_15.addWidget(self.lineEdit_2, 1, 0, 1, 2)
+
+        self.lineEdit = QLineEdit(self.widget_16)
+        self.lineEdit.setObjectName(u"lineEdit")
+
+        self.gridLayout_15.addWidget(self.lineEdit, 0, 0, 1, 2)
+
+
+        self.gridLayout_16.addWidget(self.widget_16, 0, 1, 1, 1)
+
+        self.widget_17 = QWidget(self.frame_2)
+        self.widget_17.setObjectName(u"widget_17")
+
+        self.gridLayout_16.addWidget(self.widget_17, 1, 1, 1, 1)
+
+        self.widget_18 = QWidget(self.frame_2)
+        self.widget_18.setObjectName(u"widget_18")
+        self.gridLayout_17 = QGridLayout(self.widget_18)
+        self.gridLayout_17.setObjectName(u"gridLayout_17")
+        self.gridLayout_17.setContentsMargins(10, 10, 10, 10)
+        self.tableWidget = QTableWidget(self.widget_18)
+        if (self.tableWidget.columnCount() < 5):
+            self.tableWidget.setColumnCount(5)
+        __qtablewidgetitem = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(0, __qtablewidgetitem)
+        __qtablewidgetitem1 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(1, __qtablewidgetitem1)
+        __qtablewidgetitem2 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(2, __qtablewidgetitem2)
+        __qtablewidgetitem3 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(3, __qtablewidgetitem3)
+        __qtablewidgetitem4 = QTableWidgetItem()
+        self.tableWidget.setHorizontalHeaderItem(4, __qtablewidgetitem4)
+        self.tableWidget.setObjectName(u"tableWidget")
+        self.tableWidget.setSizeAdjustPolicy(QAbstractScrollArea.AdjustIgnored)
+        self.tableWidget.setDragDropMode(QAbstractItemView.InternalMove)
+        self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
+        self.tableWidget.horizontalHeader().setDefaultSectionSize(100)
+        self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setStretchLastSection(False)
+
+        self.gridLayout_17.addWidget(self.tableWidget, 0, 0, 1, 1)
+
+
+        self.gridLayout_16.addWidget(self.widget_18, 0, 0, 2, 1)
+
+        self.gridLayout_16.setRowStretch(0, 1)
+        self.gridLayout_16.setRowStretch(1, 1)
+        self.gridLayout_16.setColumnStretch(0, 1)
+        self.gridLayout_16.setColumnStretch(1, 1)
+
+        self.gridLayout_14.addWidget(self.frame_2, 0, 0, 1, 1)
+
+        self.stackedWidget.addWidget(self.page)
 
         self.gridLayout_6.addWidget(self.stackedWidget, 0, 0, 1, 1)
 
@@ -2854,7 +2978,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(3)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -2862,9 +2986,11 @@ class Ui_MainWindow(object):
 
     def retranslateUi(self, MainWindow):
         MainWindow.setWindowTitle(QCoreApplication.translate("MainWindow", u"MainWindow", None))
+        self.btn_extend.setText("")
         self.btn_all.setText("")
         self.btn_classes.setText("")
         self.btn_teachers.setText("")
+        self.btn_edit_teachers.setText("")
         self.btn_save.setText("")
         self.btn_settings.setText("")
         self.label.setText(QCoreApplication.translate("MainWindow", u"class reservation system", None))
@@ -3108,6 +3234,18 @@ class Ui_MainWindow(object):
         self.tab2_season_selection.setItemText(7, QCoreApplication.translate("MainWindow", u"2021 | S2", None))
         self.tab2_season_selection.setItemText(8, QCoreApplication.translate("MainWindow", u"2021 | S3", None))
 
+        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
+        ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
+        ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"id", None));
+        ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"New Column", None));
+        ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"name", None));
+        ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"subject", None));
+        ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
+        ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"actions", None));
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"   made by ilyes", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"             V 1.0.0", None))
     # retranslateUi

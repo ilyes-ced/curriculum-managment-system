@@ -79,6 +79,8 @@ class MainWindow(QMainWindow):
         self.ui.btn_all.clicked.connect(self.change_stack)
         self.ui.btn_teachers.clicked.connect(self.change_stack)
         self.ui.btn_classes.clicked.connect(self.change_stack)
+        self.ui.btn_edit_teachers.clicked.connect(self.change_stack)
+
         self.ui.btn_save.clicked.connect(self.create_file)
 
      
@@ -193,6 +195,7 @@ class MainWindow(QMainWindow):
        
         # fills the table for the first time
         self.data_on_start()
+        self.fill_teachers_data()
 
 
 
@@ -242,7 +245,8 @@ class MainWindow(QMainWindow):
 
 
 
-
+    def fill_teachers_data(self):
+        print('gergreg')
 
 
 
@@ -453,6 +457,12 @@ class MainWindow(QMainWindow):
             self.ui.btn_all.setStyleSheet('border: none;')
             self.ui.btn_classes.setStyleSheet('border-left: 3px solid #04eeff;')
             self.ui.btn_teachers.setStyleSheet('border: none;')
+        elif name == 'btn_edit_teachers':
+            self.ui.stackedWidget.setCurrentIndex(3)
+            self.ui.btn_all.setStyleSheet('border: none;')
+            self.ui.btn_classes.setStyleSheet('border-left: 3px solid #04eeff;')
+            self.ui.btn_teachers.setStyleSheet('border: none;')
+
 
 
 
