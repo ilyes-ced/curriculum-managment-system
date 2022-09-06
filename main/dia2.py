@@ -172,7 +172,7 @@ class Ui_Dialog(object):
         self.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).click()
 
     def changed_teacher(self):
-        con = sqlite3.connect(r"C:\my_projects\python\project1\main\db.sqlite")
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
         cur = con.cursor()
         cur.execute("select * from teachers where name=?",(self.comboBox.currentText(),))
         teachers = cur.fetchone()

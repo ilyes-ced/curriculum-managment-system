@@ -368,7 +368,7 @@ class Ui_MainWindow(object):
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 900, 2300))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1119, 2300))
         self.gridLayout_3 = QGridLayout(self.scrollAreaWidgetContents)
         self.gridLayout_3.setSpacing(0)
         self.gridLayout_3.setObjectName(u"gridLayout_3")
@@ -2832,61 +2832,6 @@ class Ui_MainWindow(object):
         self.gridLayout_16.setSpacing(20)
         self.gridLayout_16.setObjectName(u"gridLayout_16")
         self.gridLayout_16.setContentsMargins(40, 40, 40, 40)
-        self.widget_16 = QWidget(self.frame_2)
-        self.widget_16.setObjectName(u"widget_16")
-        self.gridLayout_15 = QGridLayout(self.widget_16)
-        self.gridLayout_15.setSpacing(0)
-        self.gridLayout_15.setObjectName(u"gridLayout_15")
-        self.gridLayout_15.setContentsMargins(0, 0, 0, 0)
-        self.horizontalSlider_2 = QSlider(self.widget_16)
-        self.horizontalSlider_2.setObjectName(u"horizontalSlider_2")
-        self.horizontalSlider_2.setMaximum(255)
-        self.horizontalSlider_2.setOrientation(Qt.Horizontal)
-
-        self.gridLayout_15.addWidget(self.horizontalSlider_2, 3, 0, 1, 2)
-
-        self.pushButton_3 = QPushButton(self.widget_16)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-
-        self.gridLayout_15.addWidget(self.pushButton_3, 5, 0, 1, 1)
-
-        self.horizontalSlider_3 = QSlider(self.widget_16)
-        self.horizontalSlider_3.setObjectName(u"horizontalSlider_3")
-        self.horizontalSlider_3.setMaximum(255)
-        self.horizontalSlider_3.setOrientation(Qt.Horizontal)
-
-        self.gridLayout_15.addWidget(self.horizontalSlider_3, 4, 0, 1, 2)
-
-        self.pushButton_2 = QPushButton(self.widget_16)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-
-        self.gridLayout_15.addWidget(self.pushButton_2, 5, 1, 1, 1)
-
-        self.horizontalSlider = QSlider(self.widget_16)
-        self.horizontalSlider.setObjectName(u"horizontalSlider")
-        self.horizontalSlider.setMaximum(255)
-        self.horizontalSlider.setOrientation(Qt.Horizontal)
-
-        self.gridLayout_15.addWidget(self.horizontalSlider, 2, 0, 1, 2)
-
-        self.lineEdit_2 = QLineEdit(self.widget_16)
-        self.lineEdit_2.setObjectName(u"lineEdit_2")
-
-        self.gridLayout_15.addWidget(self.lineEdit_2, 1, 0, 1, 2)
-
-        self.lineEdit = QLineEdit(self.widget_16)
-        self.lineEdit.setObjectName(u"lineEdit")
-
-        self.gridLayout_15.addWidget(self.lineEdit, 0, 0, 1, 2)
-
-
-        self.gridLayout_16.addWidget(self.widget_16, 0, 1, 1, 1)
-
-        self.widget_17 = QWidget(self.frame_2)
-        self.widget_17.setObjectName(u"widget_17")
-
-        self.gridLayout_16.addWidget(self.widget_17, 1, 1, 1, 1)
-
         self.widget_18 = QWidget(self.frame_2)
         self.widget_18.setObjectName(u"widget_18")
         self.gridLayout_17 = QGridLayout(self.widget_18)
@@ -2926,6 +2871,80 @@ class Ui_MainWindow(object):
 
 
         self.gridLayout_16.addWidget(self.widget_18, 0, 0, 2, 1)
+
+        self.widget_16 = QWidget(self.frame_2)
+        self.widget_16.setObjectName(u"widget_16")
+        self.gridLayout_15 = QGridLayout(self.widget_16)
+        self.gridLayout_15.setObjectName(u"gridLayout_15")
+        self.gridLayout_15.setHorizontalSpacing(32)
+        self.gridLayout_15.setVerticalSpacing(20)
+        self.gridLayout_15.setContentsMargins(10, 10, 10, 10)
+        self.b_label = QLabel(self.widget_16)
+        self.b_label.setObjectName(u"b_label")
+
+        self.gridLayout_15.addWidget(self.b_label, 6, 0, 1, 1)
+
+        self.r_label = QLabel(self.widget_16)
+        self.r_label.setObjectName(u"r_label")
+
+        self.gridLayout_15.addWidget(self.r_label, 2, 0, 1, 1)
+
+        self.r_slider = QSlider(self.widget_16)
+        self.r_slider.setObjectName(u"r_slider")
+        self.r_slider.setMaximum(255)
+        self.r_slider.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.r_slider, 3, 0, 1, 2)
+
+        self.g_label = QLabel(self.widget_16)
+        self.g_label.setObjectName(u"g_label")
+
+        self.gridLayout_15.addWidget(self.g_label, 4, 0, 1, 1)
+
+        self.teacher_name = QLineEdit(self.widget_16)
+        self.teacher_name.setObjectName(u"teacher_name")
+        self.teacher_name.setMinimumSize(QSize(0, 35))
+        self.teacher_name.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_15.addWidget(self.teacher_name, 0, 0, 1, 2)
+
+        self.b_slider = QSlider(self.widget_16)
+        self.b_slider.setObjectName(u"b_slider")
+        self.b_slider.setMinimumSize(QSize(0, 0))
+        self.b_slider.setMaximum(255)
+        self.b_slider.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.b_slider, 7, 0, 1, 2)
+
+        self.teacher_subject = QLineEdit(self.widget_16)
+        self.teacher_subject.setObjectName(u"teacher_subject")
+        self.teacher_subject.setMinimumSize(QSize(0, 35))
+        self.teacher_subject.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout_15.addWidget(self.teacher_subject, 1, 0, 1, 2)
+
+        self.g_slider = QSlider(self.widget_16)
+        self.g_slider.setObjectName(u"g_slider")
+        self.g_slider.setMaximum(255)
+        self.g_slider.setOrientation(Qt.Horizontal)
+
+        self.gridLayout_15.addWidget(self.g_slider, 5, 0, 1, 2)
+
+        self.widget_17 = QWidget(self.widget_16)
+        self.widget_17.setObjectName(u"widget_17")
+        self.cancel_teacher_data = QPushButton(self.widget_17)
+        self.cancel_teacher_data.setObjectName(u"cancel_teacher_data")
+        self.cancel_teacher_data.setGeometry(QRect(0, 10, 191, 35))
+        self.cancel_teacher_data.setMinimumSize(QSize(0, 35))
+        self.save_teacher_data = QPushButton(self.widget_17)
+        self.save_teacher_data.setObjectName(u"save_teacher_data")
+        self.save_teacher_data.setGeometry(QRect(202, 10, 331, 35))
+        self.save_teacher_data.setMinimumSize(QSize(0, 35))
+
+        self.gridLayout_15.addWidget(self.widget_17, 8, 0, 1, 2)
+
+
+        self.gridLayout_16.addWidget(self.widget_16, 0, 1, 2, 1)
 
         self.gridLayout_16.setRowStretch(0, 1)
         self.gridLayout_16.setRowStretch(1, 1)
@@ -3253,8 +3272,6 @@ class Ui_MainWindow(object):
         self.tab2_season_selection.setItemText(7, QCoreApplication.translate("MainWindow", u"2021 | S2", None))
         self.tab2_season_selection.setItemText(8, QCoreApplication.translate("MainWindow", u"2021 | S3", None))
 
-        self.pushButton_3.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
-        self.pushButton_2.setText(QCoreApplication.translate("MainWindow", u"PushButton", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"id", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
@@ -3265,6 +3282,13 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"color", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"Delete", None));
+        self.b_label.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.r_label.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.g_label.setText(QCoreApplication.translate("MainWindow", u"0", None))
+        self.teacher_name.setPlaceholderText(QCoreApplication.translate("MainWindow", u"name", None))
+        self.teacher_subject.setPlaceholderText(QCoreApplication.translate("MainWindow", u"subject", None))
+        self.cancel_teacher_data.setText(QCoreApplication.translate("MainWindow", u"cancel", None))
+        self.save_teacher_data.setText(QCoreApplication.translate("MainWindow", u"save", None))
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"   made by ilyes", None))
         self.label_4.setText(QCoreApplication.translate("MainWindow", u"             V 1.0.0", None))
     # retranslateUi

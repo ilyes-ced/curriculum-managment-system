@@ -609,8 +609,8 @@ QHeaderView::section:vertical
 */
 
 
-#widget16, #widget17, #widget18{
-	background-color: white;
+#widget_16{
+	background-color: rgba(35,36,57,0.8);
 	border: 1px solid #04eeff;
 	border-radius: 10px;
 }
@@ -655,4 +655,38 @@ QHeaderView, QHeaderView::section {
     font-size: 15px;
     border: 1px;
     padding: 0px
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+QLineEdit{
+	background-color: transparent;
+	border: 1px solid #04eeff;
+	border-radius: 5px;
+}
+
+
+
+#save_teacher_data,#cancel_teacher_data{
+	background-color: #04eeff;
+	border: 1px #04eeff solid;
+	border-radius: 2px;
+	color : white;
+}
+
+#widget_17{
+	border-top: 1px solid #04eeff;
 }

@@ -916,7 +916,7 @@
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>900</width>
+                            <width>1119</width>
                             <height>2300</height>
                            </rect>
                           </property>
@@ -6491,80 +6491,6 @@
                     <property name="spacing">
                      <number>20</number>
                     </property>
-                    <item row="0" column="1">
-                     <widget class="QWidget" name="widget_16" native="true">
-                      <layout class="QGridLayout" name="gridLayout_15">
-                       <property name="leftMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="topMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="rightMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="bottomMargin">
-                        <number>0</number>
-                       </property>
-                       <property name="spacing">
-                        <number>0</number>
-                       </property>
-                       <item row="3" column="0" colspan="2">
-                        <widget class="QSlider" name="horizontalSlider_2">
-                         <property name="maximum">
-                          <number>255</number>
-                         </property>
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="5" column="0">
-                        <widget class="QPushButton" name="pushButton_3">
-                         <property name="text">
-                          <string>PushButton</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="4" column="0" colspan="2">
-                        <widget class="QSlider" name="horizontalSlider_3">
-                         <property name="maximum">
-                          <number>255</number>
-                         </property>
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="5" column="1">
-                        <widget class="QPushButton" name="pushButton_2">
-                         <property name="text">
-                          <string>PushButton</string>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="2" column="0" colspan="2">
-                        <widget class="QSlider" name="horizontalSlider">
-                         <property name="maximum">
-                          <number>255</number>
-                         </property>
-                         <property name="orientation">
-                          <enum>Qt::Horizontal</enum>
-                         </property>
-                        </widget>
-                       </item>
-                       <item row="1" column="0" colspan="2">
-                        <widget class="QLineEdit" name="lineEdit_2"/>
-                       </item>
-                       <item row="0" column="0" colspan="2">
-                        <widget class="QLineEdit" name="lineEdit"/>
-                       </item>
-                      </layout>
-                     </widget>
-                    </item>
-                    <item row="1" column="1">
-                     <widget class="QWidget" name="widget_17" native="true"/>
-                    </item>
                     <item row="0" column="0" rowspan="2">
                      <widget class="QWidget" name="widget_18" native="true">
                       <layout class="QGridLayout" name="gridLayout_17">
@@ -6652,6 +6578,161 @@
                            <string>Delete</string>
                           </property>
                          </column>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item row="0" column="1" rowspan="2">
+                     <widget class="QWidget" name="widget_16" native="true">
+                      <layout class="QGridLayout" name="gridLayout_15">
+                       <property name="leftMargin">
+                        <number>10</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>10</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>10</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>10</number>
+                       </property>
+                       <property name="horizontalSpacing">
+                        <number>32</number>
+                       </property>
+                       <property name="verticalSpacing">
+                        <number>20</number>
+                       </property>
+                       <item row="6" column="0">
+                        <widget class="QLabel" name="b_label">
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="2" column="0">
+                        <widget class="QLabel" name="r_label">
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="3" column="0" colspan="2">
+                        <widget class="QSlider" name="r_slider">
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="4" column="0">
+                        <widget class="QLabel" name="g_label">
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="0" column="0" colspan="2">
+                        <widget class="QLineEdit" name="teacher_name">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="placeholderText">
+                          <string>name</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="7" column="0" colspan="2">
+                        <widget class="QSlider" name="b_slider">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="1" column="0" colspan="2">
+                        <widget class="QLineEdit" name="teacher_subject">
+                         <property name="minimumSize">
+                          <size>
+                           <width>0</width>
+                           <height>35</height>
+                          </size>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                         <property name="placeholderText">
+                          <string>subject</string>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="5" column="0" colspan="2">
+                        <widget class="QSlider" name="g_slider">
+                         <property name="maximum">
+                          <number>255</number>
+                         </property>
+                         <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
+                         </property>
+                        </widget>
+                       </item>
+                       <item row="8" column="0" colspan="2">
+                        <widget class="QWidget" name="widget_17" native="true">
+                         <widget class="QPushButton" name="cancel_teacher_data">
+                          <property name="geometry">
+                           <rect>
+                            <x>0</x>
+                            <y>10</y>
+                            <width>191</width>
+                            <height>35</height>
+                           </rect>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>35</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>cancel</string>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="save_teacher_data">
+                          <property name="geometry">
+                           <rect>
+                            <x>202</x>
+                            <y>10</y>
+                            <width>331</width>
+                            <height>35</height>
+                           </rect>
+                          </property>
+                          <property name="minimumSize">
+                           <size>
+                            <width>0</width>
+                            <height>35</height>
+                           </size>
+                          </property>
+                          <property name="text">
+                           <string>save</string>
+                          </property>
+                         </widget>
                         </widget>
                        </item>
                       </layout>

@@ -1,5 +1,6 @@
 from re import I
 import sys
+from tokenize import Name
 from BlurWindow.blurWindow import blur
 from ui_main import Ui_MainWindow
 from dia2 import Ui_Dialog
@@ -83,9 +84,11 @@ class MainWindow(QMainWindow):
 
         self.ui.btn_save.clicked.connect(self.create_file)
 
-     
-
-
+        self.ui.r_slider.valueChanged.connect(self.rgb_change)
+        self.ui.g_slider.valueChanged.connect(self.rgb_change)
+        self.ui.b_slider.valueChanged.connect(self.rgb_change)
+        self.ui.save_teacher_data.clicked.connect(self.saved_teacher_data)
+        self.ui.cancel_teacher_data.clicked.connect(self.canceled_teacher_data)
 
         #create databse tables in case of new programe
         con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
@@ -215,16 +218,6 @@ class MainWindow(QMainWindow):
 
 
 
-
-
-
-
-
-
-
-
-
-
         def show_max_normal(self):
             if self.max_==False:
                 self.max_=True
@@ -271,12 +264,15 @@ class MainWindow(QMainWindow):
             self.ui.tableWidget.setItem(i, 1, item2)
             self.ui.tableWidget.setItem(i, 2, item3)
             self.ui.tableWidget.setItem(i, 3, item4)
-            btn= QPushButton('Hello') 
-            btn.clicked.connect(self.pr)
+            btn= QPushButton() 
+            btn.setObjectName('delete_'+str(teacher[0]))
+            print('delete_'+str(teacher[0]))
+            btn.setIcon(QIcon('C:\my_projects\python\project1\main\images\delete.svg'))
+            #exec("self."+'delete_'+str(teacher[0])+".clicked.connect(self.clicked_on_a_reservation)" )
             self.ui.tableWidget.setCellWidget(i, 4, btn)
 
-    def pr(self):
-        print('gfregerg')
+    def delete_teacher(self,id):
+        print(self,id)
 
 
 
@@ -297,6 +293,16 @@ class MainWindow(QMainWindow):
 
 
 
+
+    def rgb_change(self):
+        if(self.sender().objectName()=='r_slider'):
+            self.ui.r_label.setText(str(self.sender().value()))
+        elif(self.sender().objectName()=='g_slider'):
+            self.ui.g_label.setText(str(self.sender().value()))
+        elif(self.sender().objectName()=='b_slider'):
+            self.ui.b_label.setText(str(self.sender().value()))
+
+        self.ui.widget_16.setStyleSheet("background-color: rgb("+str(self.ui.r_slider.value())+","+str(self.ui.g_slider.value())+","+str(self.ui.b_slider.value())+")")
 
 
 
@@ -374,6 +380,70 @@ class MainWindow(QMainWindow):
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    def saved_teacher_data(self):
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
+        cur = con.cursor()
+
+        name = self.ui.teacher_name.text()
+        subject = self.ui.teacher_subject.text()
+        color = str(self.ui.r_slider.value()) + "," + str(self.ui.g_slider.value()) + "," + str(self.ui.b_slider.value())
+        cur.execute("INSERT INTO teachers(name, subject, color) VALUES(?,?,?)",(name,subject,color))
+        con.commit()
+
+        cur.execute("select max(id) from teachers")
+        id = int(cur.fetchone()[0])+1
+        ind = self.ui.tableWidget.rowCount()
+        self.ui.tableWidget.insertRow(ind)
+        rgb = color.split(',')
+        item1 = QTableWidgetItem(str(id))
+        item2 = QTableWidgetItem(str(name))
+        item3 = QTableWidgetItem(str(subject))
+        item4 = QTableWidgetItem(str(color))
+        item1.setTextAlignment(Qt.AlignCenter)
+        item2.setTextAlignment(Qt.AlignCenter)
+        item3.setTextAlignment(Qt.AlignCenter)
+        item4.setTextAlignment(Qt.AlignCenter)
+        item1.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+        item2.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+        item3.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+        item4.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+        self.ui.tableWidget.setItem(ind, 0, item1)
+        self.ui.tableWidget.setItem(ind, 1, item2)
+        self.ui.tableWidget.setItem(ind, 2, item3)
+        self.ui.tableWidget.setItem(ind, 3, item4)
+        btn= QPushButton() 
+        btn.setIcon(QIcon('C:\my_projects\python\project1\main\images\delete.svg'))
+        btn.clicked.connect(self.pr)
+        self.ui.tableWidget.setCellWidget(ind, 4, btn)
+        self.ui.teacher_name.setText('')
+        self.ui.teacher_subject.setText('')
+        self.ui.r_slider.setValue(0)
+        self.ui.g_slider.setValue(0)
+        self.ui.b_slider.setValue(0)
+    def canceled_teacher_data(self):
+        self.ui.teacher_name.setText('')
+        self.ui.teacher_subject.setText('')
 
 
 
