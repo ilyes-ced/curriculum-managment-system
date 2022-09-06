@@ -916,7 +916,7 @@
                            <rect>
                             <x>0</x>
                             <y>0</y>
-                            <width>1119</width>
+                            <width>900</width>
                             <height>2300</height>
                            </rect>
                           </property>
@@ -6450,7 +6450,7 @@
                  </item>
                 </layout>
                </widget>
-               <widget class="QWidget" name="page">
+               <widget class="QWidget" name="teachers_data">
                 <layout class="QGridLayout" name="gridLayout_14">
                  <property name="leftMargin">
                   <number>0</number>
@@ -6495,16 +6495,19 @@
                      <widget class="QWidget" name="widget_16" native="true">
                       <layout class="QGridLayout" name="gridLayout_15">
                        <property name="leftMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="topMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="rightMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="bottomMargin">
-                        <number>10</number>
+                        <number>0</number>
+                       </property>
+                       <property name="spacing">
+                        <number>0</number>
                        </property>
                        <item row="3" column="0" colspan="2">
                         <widget class="QSlider" name="horizontalSlider_2">
@@ -6566,27 +6569,48 @@
                      <widget class="QWidget" name="widget_18" native="true">
                       <layout class="QGridLayout" name="gridLayout_17">
                        <property name="leftMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="topMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="rightMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="bottomMargin">
-                        <number>10</number>
+                        <number>0</number>
                        </property>
                        <property name="spacing">
                         <number>0</number>
                        </property>
                        <item row="0" column="0">
                         <widget class="QTableWidget" name="tableWidget">
+                         <property name="lineWidth">
+                          <number>0</number>
+                         </property>
                          <property name="sizeAdjustPolicy">
                           <enum>QAbstractScrollArea::AdjustIgnored</enum>
                          </property>
+                         <property name="dragDropOverwriteMode">
+                          <bool>false</bool>
+                         </property>
                          <property name="dragDropMode">
                           <enum>QAbstractItemView::InternalMove</enum>
+                         </property>
+                         <property name="alternatingRowColors">
+                          <bool>false</bool>
+                         </property>
+                         <property name="selectionMode">
+                          <enum>QAbstractItemView::NoSelection</enum>
+                         </property>
+                         <property name="showGrid">
+                          <bool>false</bool>
+                         </property>
+                         <property name="gridStyle">
+                          <enum>Qt::SolidLine</enum>
+                         </property>
+                         <property name="sortingEnabled">
+                          <bool>true</bool>
                          </property>
                          <attribute name="horizontalHeaderCascadingSectionResizes">
                           <bool>false</bool>
@@ -6625,7 +6649,7 @@
                          </column>
                          <column>
                           <property name="text">
-                           <string>actions</string>
+                           <string>Delete</string>
                           </property>
                          </column>
                         </widget>

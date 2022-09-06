@@ -6,7 +6,7 @@ from dia2 import Ui_Dialog
 import ctypes
 import math
 from PySide6.QtCore import QSize
-from PySide6.QtGui import Qt, QIcon 
+from PySide6.QtGui import Qt, QIcon , QColor
 from PySide6.QtWidgets import QApplication, QMainWindow, QSizeGrip, QPushButton, QVBoxLayout, QDialogButtonBox, QDialog, QTableWidgetItem
 import sqlite3,json
 import csv  
@@ -252,16 +252,31 @@ class MainWindow(QMainWindow):
         teachers = cur.fetchall()
         self.ui.tableWidget.setRowCount(0)
         for i, teacher in enumerate(teachers):
+            rgb = teacher[3].split(',')
             self.ui.tableWidget.insertRow(i)
-            self.ui.tableWidget.setItem(i, 0, QTableWidgetItem(str(teacher[0])))
-            self.ui.tableWidget.setItem(i, 1, QTableWidgetItem(str(teacher[1])))
-            self.ui.tableWidget.setItem(i, 2, QTableWidgetItem(str(teacher[2])))
-            self.ui.tableWidget.setItem(i, 3, QTableWidgetItem(str(teacher[3])))
+            
+            item1 = QTableWidgetItem(str(teacher[0]))
+            item2 = QTableWidgetItem(str(teacher[1]))
+            item3 = QTableWidgetItem(str(teacher[2]))
+            item4 = QTableWidgetItem(str(teacher[3]))
+            item1.setTextAlignment(Qt.AlignCenter)
+            item2.setTextAlignment(Qt.AlignCenter)
+            item3.setTextAlignment(Qt.AlignCenter)
+            item4.setTextAlignment(Qt.AlignCenter)
+            item1.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+            item2.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+            item3.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+            item4.setBackground(QColor(int(rgb[0]),int(rgb[1]),int(rgb[2])))
+            self.ui.tableWidget.setItem(i, 0, item1)
+            self.ui.tableWidget.setItem(i, 1, item2)
+            self.ui.tableWidget.setItem(i, 2, item3)
+            self.ui.tableWidget.setItem(i, 3, item4)
+            btn= QPushButton('Hello') 
+            btn.clicked.connect(self.pr)
+            self.ui.tableWidget.setCellWidget(i, 4, btn)
 
-
-
-
-
+    def pr(self):
+        print('gfregerg')
 
 
 

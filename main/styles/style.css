@@ -610,7 +610,49 @@ QHeaderView::section:vertical
 
 
 #widget16, #widget17, #widget18{
-	background-color: rgba(35,36,57,0.8);
+	background-color: white;
 	border: 1px solid #04eeff;
 	border-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+QTableView {
+	border-radius: 10px;
+	background-color: rgba(35,36,57,0.8);
+	border: 1px solid #04eeff;
+	/*gridline-color: #04eeff; */
+}
+
+
+
+QTableView::item {
+	border-bottom: 1px solid #04eeff;
+}
+
+QTableView::item:selected {
+    background-color: #04eeff;
+}
+
+QTableView QTableCornerButton::section {
+    background-color: "red";
+    border: 1px;
+    padding: 0px;
+}
+
+QHeaderView, QHeaderView::section {
+	border-top-right-radius: 10px;
+	border-top-left-radius: 10px;
+    background-color:#04eeff;
+    color: "#eee";
+    font-size: 15px;
+    border: 1px;
+    padding: 0px
 }
