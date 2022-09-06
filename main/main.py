@@ -265,17 +265,20 @@ class MainWindow(QMainWindow):
             self.ui.tableWidget.setItem(i, 2, item3)
             self.ui.tableWidget.setItem(i, 3, item4)
             btn= QPushButton() 
-            btn.setObjectName('delete_'+str(teacher[0]))
-            print('delete_'+str(teacher[0]))
+            btn.setObjectName(str(teacher[0]))
+            btn.clicked.connect(self.delete_teacher)
+            #btn.setObjectName('delete_'+str(teacher[0]))
             btn.setIcon(QIcon('C:\my_projects\python\project1\main\images\delete.svg'))
-            #exec("self."+'delete_'+str(teacher[0])+".clicked.connect(self.clicked_on_a_reservation)" )
+            #exec("self.ui."+'delete_'+str(teacher[0])+".clicked.connect(self.clicked_on_a_reservation)" )
             self.ui.tableWidget.setCellWidget(i, 4, btn)
+            self.ui.tableWidget.setRowHeight(i, 35)  
 
-    def delete_teacher(self,id):
-        print(self,id)
-
-
-
+    def delete_teacher(self):
+        the_id = self.sender().objectName()
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
+        cur = con.cursor()
+        cur.execute('delete from teachers where id=?', (the_id,))
+        con.commit()
 
 
     def side_bar_extend(self):
