@@ -7,7 +7,7 @@ import ctypes
 import math
 from PySide6.QtCore import QSize
 from PySide6.QtGui import Qt, QIcon 
-from PySide6.QtWidgets import QApplication, QMainWindow, QSizeGrip, QPushButton, QVBoxLayout, QDialogButtonBox, QDialog
+from PySide6.QtWidgets import QApplication, QMainWindow, QSizeGrip, QPushButton, QVBoxLayout, QDialogButtonBox, QDialog, QTableWidgetItem
 import sqlite3,json
 import csv  
 
@@ -246,9 +246,17 @@ class MainWindow(QMainWindow):
 
 
     def fill_teachers_data(self):
-        print('gergreg')
-
-
+        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
+        cur = con.cursor()
+        cur.execute('SELECT * from teachers')
+        teachers = cur.fetchall()
+        self.ui.tableWidget.setRowCount(0)
+        for i, teacher in enumerate(teachers):
+            self.ui.tableWidget.insertRow(i)
+            self.ui.tableWidget.setItem(i, 0, QTableWidgetItem(str(teacher[0])))
+            self.ui.tableWidget.setItem(i, 1, QTableWidgetItem(str(teacher[1])))
+            self.ui.tableWidget.setItem(i, 2, QTableWidgetItem(str(teacher[2])))
+            self.ui.tableWidget.setItem(i, 3, QTableWidgetItem(str(teacher[3])))
 
 
 

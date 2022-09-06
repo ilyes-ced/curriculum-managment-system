@@ -591,14 +591,12 @@ QComboBox::drop-down{
 
 
 QHeaderView::section {
-    background-color: #646464;
-    padding: 4px;
-    font-size: 14pt;
-    border-style: none;
+    background-color: rgba(35,36,57,0.8);
+	/*
     border-bottom: 1px solid #fffff8;
-    border-right: 1px solid #fffff8;
+    border-right: 1px solid #fffff8;*/
 }
-
+/*
 QHeaderView::section:horizontal
 {
     border-top: 1px solid #fffff8;
@@ -608,7 +606,7 @@ QHeaderView::section:vertical
 {
     border-left: 1px solid #fffff8;
 }
-
+*/
 
 
 #widget16, #widget17, #widget18{

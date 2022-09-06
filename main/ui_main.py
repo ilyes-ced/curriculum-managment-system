@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ui_filejtaVxw.ui'
+## Form generated from reading UI file 'ui_fileIGFeGs.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.1.0
 ##
@@ -2880,6 +2880,7 @@ class Ui_MainWindow(object):
         self.widget_18 = QWidget(self.frame_2)
         self.widget_18.setObjectName(u"widget_18")
         self.gridLayout_17 = QGridLayout(self.widget_18)
+        self.gridLayout_17.setSpacing(0)
         self.gridLayout_17.setObjectName(u"gridLayout_17")
         self.gridLayout_17.setContentsMargins(10, 10, 10, 10)
         self.tableWidget = QTableWidget(self.widget_18)
@@ -2901,6 +2902,7 @@ class Ui_MainWindow(object):
         self.tableWidget.horizontalHeader().setCascadingSectionResizes(False)
         self.tableWidget.horizontalHeader().setDefaultSectionSize(100)
         self.tableWidget.horizontalHeader().setStretchLastSection(True)
+        self.tableWidget.verticalHeader().setVisible(False)
         self.tableWidget.verticalHeader().setStretchLastSection(False)
 
         self.gridLayout_17.addWidget(self.tableWidget, 0, 0, 1, 1)
@@ -3239,11 +3241,11 @@ class Ui_MainWindow(object):
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
         ___qtablewidgetitem.setText(QCoreApplication.translate("MainWindow", u"id", None));
         ___qtablewidgetitem1 = self.tableWidget.horizontalHeaderItem(1)
-        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"New Column", None));
+        ___qtablewidgetitem1.setText(QCoreApplication.translate("MainWindow", u"name", None));
         ___qtablewidgetitem2 = self.tableWidget.horizontalHeaderItem(2)
-        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"name", None));
+        ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindow", u"subject", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
-        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"subject", None));
+        ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindow", u"color", None));
         ___qtablewidgetitem4 = self.tableWidget.horizontalHeaderItem(4)
         ___qtablewidgetitem4.setText(QCoreApplication.translate("MainWindow", u"actions", None));
         self.label_2.setText(QCoreApplication.translate("MainWindow", u"   made by ilyes", None))
