@@ -3022,7 +3022,7 @@ class Ui_MainWindow(object):
         self.btn_edit_teachers.setText("")
         self.btn_save.setText("")
         self.btn_settings.setText("")
-        self.label.setText(QCoreApplication.translate("MainWindow", u"class reservation system", None))
+        self.label.setText(QCoreApplication.translate("MainWindow", u"Python Application", None))
         self.btn_min.setText("")
         self.btn_max.setText("")
         self.btn_close.setText("")

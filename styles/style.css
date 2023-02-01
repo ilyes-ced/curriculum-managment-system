@@ -218,7 +218,7 @@ QMainWindow{
 	/*background-color: #202443;*/
 
 	background-color: rgba(35,36,57,0.8);
-	border-right: 1px solid #04eeff
+	border-right: 1px solid #04eeff;
 }
 
 #main_frame{
@@ -465,6 +465,8 @@ QComboBox::down-arrow {
 	border: solid #04eeff;
 	border-width : 0px 0px 1px 0px;
 }
+
+
 #side_bar{
 	border: 1px solid #04eeff;
 
@@ -477,9 +479,14 @@ QComboBox::down-arrow {
 	border-right: 1px solid #04eeff;
 
 }
-#title_bar{
+#title_bar, #frame{
 	border-top: 1px solid #04eeff;
-
+}
+#stackedWidget{
+	border-right: 1px solid #04eeff;
+}
+#frame_9{
+	border-right: 1px solid #04eeff;
 }
 /*
 #the_main_bloc{
