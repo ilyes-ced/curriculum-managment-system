@@ -12,6 +12,7 @@ from PySide6.QtCore import *
 from PySide6.QtGui import *
 from PySide6.QtWidgets import *
 import sqlite3,json
+import os
 
 
 class Ui_Dialog(object):
@@ -19,7 +20,7 @@ class Ui_Dialog(object):
         if not Dialog.objectName():
             Dialog.setObjectName(u"Dialog")
         Dialog.resize(400, 430)
-        Dialog.setStyleSheet(open(r"C:\my_projects\python\project1\main\styles\style2.css").read())
+        Dialog.setStyleSheet(open(os.path.join(os.path.curdir, 'styles/style2.css')).read())
         Dialog.setWindowFlags(Qt.FramelessWindowHint)
         Dialog.setAttribute(Qt.WA_TranslucentBackground)
 
@@ -172,7 +173,7 @@ class Ui_Dialog(object):
         self.buttonBox.button(QDialogButtonBox.StandardButton.Cancel).click()
 
     def changed_teacher(self):
-        con = sqlite3.connect(r"C:\my_projects\python\project1\main\database\db.sqlite")
+        con = sqlite3.connect(os.path.join(os.path.curdir, 'database/db.sqlite'))
         cur = con.cursor()
         cur.execute("select * from teachers where name=?",(self.comboBox.currentText(),))
         teachers = cur.fetchone()

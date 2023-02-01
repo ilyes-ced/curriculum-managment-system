@@ -3007,7 +3007,7 @@ class Ui_MainWindow(object):
 
         self.retranslateUi(MainWindow)
 
-        self.stackedWidget.setCurrentIndex(3)
+        self.stackedWidget.setCurrentIndex(0)
 
 
         QMetaObject.connectSlotsByName(MainWindow)
@@ -3096,7 +3096,7 @@ class Ui_MainWindow(object):
         self.add_cell_38.setText(QCoreApplication.translate("MainWindow", u"add session", None))
         self.add_cell_39.setText(QCoreApplication.translate("MainWindow", u"add session", None))
         self.add_cell_40.setText(QCoreApplication.translate("MainWindow", u"add session", None))
-        self.pushButton_153.setText(QCoreApplication.translate("MainWindow", u"14:30 - 17:30", None))
+        self.pushButton_153.setText(QCoreApplication.translate("MainWindow", u"16:30 - 17:30", None))
         self.add_cell_41.setText(QCoreApplication.translate("MainWindow", u"add session", None))
         self.add_cell_42.setText(QCoreApplication.translate("MainWindow", u"add session", None))
         self.add_cell_43.setText(QCoreApplication.translate("MainWindow", u"add session", None))
@@ -3150,7 +3150,7 @@ class Ui_MainWindow(object):
         self.square_38.setText("")
         self.square_39.setText("")
         self.square_40.setText("")
-        self.pushButton_80.setText(QCoreApplication.translate("MainWindow", u"14:30 - 17:30", None))
+        self.pushButton_80.setText(QCoreApplication.translate("MainWindow", u"16:30 - 17:30", None))
         self.square_41.setText("")
         self.square_42.setText("")
         self.square_43.setText("")
@@ -3241,7 +3241,7 @@ class Ui_MainWindow(object):
         self.box_38.setText("")
         self.box_39.setText("")
         self.box_40.setText("")
-        self.pushButton_38.setText(QCoreApplication.translate("MainWindow", u"14:30 - 17:30", None))
+        self.pushButton_38.setText(QCoreApplication.translate("MainWindow", u"16:30 - 17:30", None))
         self.box_41.setText("")
         self.box_42.setText("")
         self.box_43.setText("")
@@ -3280,7 +3280,7 @@ class Ui_MainWindow(object):
         self.teacher_subject.setPlaceholderText(QCoreApplication.translate("MainWindow", u"subject", None))
         self.cancel_teacher_data.setText(QCoreApplication.translate("MainWindow", u"cancel", None))
         self.save_teacher_data.setText(QCoreApplication.translate("MainWindow", u"save", None))
-        self.label_2.setText(QCoreApplication.translate("MainWindow", u"   made by ilyes", None))
-        self.label_4.setText(QCoreApplication.translate("MainWindow", u"             V 1.0.0", None))
+        self.label_2.setText(QCoreApplication.translate("MainWindow", u"   made with PyQt ", None))
+        self.label_4.setText(QCoreApplication.translate("MainWindow", u"        V 1.0.0", None))
     # retranslateUi
 

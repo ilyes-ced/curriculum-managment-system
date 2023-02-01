@@ -462,7 +462,6 @@ QComboBox::down-arrow {
 #pushButton_81
 {
 	
-
 	border: solid #04eeff;
 	border-width : 0px 0px 1px 0px;
 }
@@ -577,6 +576,93 @@ QComboBox::drop-down{
 	color:#fe2da3;
 	font-size: 14px;
 	border : 2px solid #fe2da3;
+}
+
+
+#add_cell_1,
+#add_cell_2,
+#add_cell_3,
+#add_cell_4,
+#add_cell_5,
+#add_cell_6,
+#add_cell_7,
+#add_cell_8,
+#add_cell_9,
+#add_cell_10,
+#add_cell_11,
+#add_cell_12,
+#add_cell_13,
+#add_cell_14,
+#add_cell_15,
+#add_cell_16,
+#add_cell_17,
+#add_cell_18,
+#add_cell_19,
+#add_cell_20,
+#add_cell_21,
+#add_cell_22,
+#add_cell_23,
+#add_cell_24,
+#add_cell_25,
+#add_cell_26,
+#add_cell_27,
+#add_cell_28,
+#add_cell_29,
+#add_cell_30,
+#add_cell_31,
+#add_cell_32,
+#add_cell_33,
+#add_cell_34,
+#add_cell_35,
+#add_cell_36,
+#add_cell_37,
+#add_cell_38,
+#add_cell_39,
+#add_cell_40,
+#add_cell_41,
+#add_cell_42,
+#add_cell_43,
+#add_cell_44,
+#add_cell_45{
+	background-color: transparent;
+	border: none;
+}
+
+#pushButton,
+#pushButton_9,
+#pushButton_10,
+#pushButton_11,
+#pushButton_12,
+#pushButton_13,
+#pushButton_14,
+#pushButton_14,
+#pushButton_92,
+#pushButton_93,
+#pushButton_123,
+#pushButton_129,
+#pushButton_135,
+#pushButton_147,
+#pushButton_141,
+#pushButton_153
+{
+	background-color: transparent;
+	border: none;
+}
+
+#pushButton_80,
+#square_41,
+#square_42,
+#square_43,
+#square_44,
+#square_45,
+#pushButton_38,
+#box_41,
+#box_42,
+#box_43,
+#box_44,
+#box_45{
+	background-color: transparent;
+	border: none;
 }
 
 
