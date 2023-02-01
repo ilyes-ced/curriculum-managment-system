@@ -486,7 +486,8 @@ QComboBox::down-arrow {
 	border-right: 1px solid #04eeff;
 }
 #frame_9{
-	border-right: 1px solid #04eeff;
+	border: 1px solid #04eeff;
+	border-left: none;
 }
 /*
 #the_main_bloc{

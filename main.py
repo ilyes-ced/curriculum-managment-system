@@ -145,14 +145,14 @@ class MainWindow(QMainWindow):
 	                        "cell_43"	TEXT,
 	                        "cell_44"	TEXT,
 	                        "cell_45"	TEXT   ); """)
-        tables.execute(''' SELECT count(name) FROM sqlite_master WHERE type='table' AND name='teachers' ''')
-        if tables.fetchone()[0]!=1:
-            tables.execute(""" CREATE TABLE "teachers" (
-	            "id"	TEXT,
-	            "name"	TEXT,
-	            "subject"	TEXT,
-	            "color"	TEXT,
-	            PRIMARY KEY("id") ); """)
+                            
+        tables.execute(""" CREATE TABLE if not exists teachers (
+	        id	integer AUTO_INCREMENT,
+	        name	TEXT,
+	        subject	TEXT,
+	        color	TEXT,
+	        PRIMARY KEY("id") ); """)
+        con.commit()
 
 
         #declare comboboxes
@@ -753,7 +753,8 @@ class MainWindow(QMainWindow):
         cur.execute("select * from teachers")
         teachers = cur.fetchall()
         classes = ['class 1','class 2','class 3','class 4','class 5']
-
+        print('//////////////////////////////////////////////////////////////////')
+        print(teachers)
         sql = ("""select cell_"""+cell_number+""" from reservations where season = ?""")
         s = (self.season_selection.currentText())
         cur.execute(sql, (s,))
@@ -765,19 +766,10 @@ class MainWindow(QMainWindow):
                     used_teachers.append(self.get_teacher(k['teacher'])[1])
 
         for i in (teachers):
+            print(i)
+            print('//////////////////////////////////////////////////////////////////')
             if not i[1] in used_teachers:
                 self.ff.comboBox.addItem(i[1])
-
-
-
-
-
-
-
-
-
-
-
 
 
 
