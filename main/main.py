@@ -11,6 +11,9 @@ from PySide6.QtGui import Qt, QIcon , QColor
 from PySide6.QtWidgets import QApplication, QMainWindow, QSizeGrip, QPushButton, QVBoxLayout, QDialogButtonBox, QDialog, QTableWidgetItem
 import sqlite3,json
 import csv  
+import os
+
+print(os.path.join(os.path.curdir, 'file.name'))
 
 #dialogue window
 class Popup_window(QDialog):
@@ -30,10 +33,10 @@ class MainWindow(QMainWindow):
         global widgets
         widgets = self.ui
         #styling  C:\my_projects\python\project1\main
-        self.ui.the_main_bloc.setStyleSheet(open(r"C:\my_projects\python\project1\main\styles\style.css").read())
+        self.ui.the_main_bloc.setStyleSheet(open(os.path.join(os.path.curdir, 'styles/style.css') ).read())
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setWindowIcon(QIcon(r'C:\my_projects\python\project1\main\images\python.svg'))
+        self.setWindowIcon(QIcon(os.path.join(os.path.curdir,'images/python.svg')))
         #blur effect
         hWnd = self.winId()
         blur(hWnd)
@@ -101,7 +104,7 @@ class MainWindow(QMainWindow):
 	                        "cell_1"	TEXT,
 	                        "cell_2"	TEXT,
 	                        "cell_3"	TEXT,
-	                        "cell_4"	INTEGER,
+	                        "cell_4"	TEXT,
 	                        "cell_5"	TEXT,
 	                        "cell_6"	TEXT,
 	                        "cell_7"	TEXT,

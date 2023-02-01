@@ -108,14 +108,14 @@ QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical {
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/python.svg");   
+	background-image: url("./images/python.svg");   
 	background-color: transparent;
 }
 #btn_save{
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/save.svg");   
+	background-image: url("./images/save.svg");   
 	background-color: transparent;
 	border: none;
 
@@ -124,21 +124,21 @@ QPushButton#btn_all{
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/home.svg");   
+	background-image: url("./images/home.svg");   
 	border:none;
 }
 QPushButton#btn_extend{	
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/items.svg");   
+	background-image: url("./images/items.svg");   
 	border: none;
 }
 QPushButton#btn_classes{	
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/class.svg");   
+	background-image: url("./images/class.svg");   
 	border: none;
 	color : #04eeff;	
 }
@@ -146,7 +146,7 @@ QPushButton#btn_teachers{
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/teacher.svg");   
+	background-image: url("./images/teacher.svg");   
 	border: none;
 	color : #04eeff;	
 }
@@ -154,7 +154,7 @@ QPushButton#btn_settings{
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/settings.svg");   
+	background-image: url("./images/settings.svg");   
 	border: none;
 }
 
@@ -162,7 +162,7 @@ QPushButton#btn_edit_teachers{
 	background-origin: content;
 	background-repeat: no-repeat;
 	background-position: center middle;
-	background-image: url("C:/my_projects/python/project1/main/images/edit.svg");   
+	background-image: url("./images/edit.svg");   
 	border: none;
 }
 
@@ -248,7 +248,7 @@ QListView::item:hover {
 /*
 QComboBox#linestylecbox::down-arrow 
 {
-	background-image: url("C:/my_projects/python/project1/main/images/settings.svg");
+	background-image: url("./images/settings.svg");
 	width: 10px;
 	height: 10px;
 	border: 0px;
@@ -257,7 +257,7 @@ QComboBox#linestylecbox::down-arrow
 
 QComboBox::down-arrow {
 	background-color: transparent;
-    image: url("C:/my_projects/python/project1/main/images/arrow.svg");
+    image: url("./images/arrow.svg");
     width: 14px;
     height: 14px;
 	
