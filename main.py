@@ -38,8 +38,13 @@ class MainWindow(QMainWindow):
         self.setAttribute(Qt.WA_TranslucentBackground)
         self.setWindowIcon(QIcon(os.path.join(os.path.curdir,'images/python.svg')))
         #blur effect
+        
         #blur(self.winId())
         
+        #works for windowss probably but not linux
+        #hWnd = self.winId()
+        #print(hWnd)
+        #blur(hWnd)
         #myappid = 'ilyes.class_managment_system.subproduct.1.0.0' # arbitrary string
         #ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
