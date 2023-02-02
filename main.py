@@ -50,7 +50,7 @@ class MainWindow(QMainWindow):
         
 
 
-        works for windowss probably but not linux
+        #works for windowss probably but not linux
         hWnd = self.winId()
         print(hWnd)
         blur(hWnd)
