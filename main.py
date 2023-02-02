@@ -12,8 +12,15 @@ from PySide6.QtWidgets import QApplication, QMainWindow, QSizeGrip, QPushButton,
 import sqlite3,json
 import csv  
 import os
+from sys import platform
 
-print(os.path.join(os.path.curdir))
+#print(os.path.join(os.path.curdir))
+#if platform == "linux" or platform == "linux2":
+#    print('linuix')
+#elif platform == "darwin":
+#    print('mac')
+#elif platform == "win32":
+#    print('winwi')
 
 #dialogue window
 class Popup_window(QDialog):
@@ -41,6 +48,8 @@ class MainWindow(QMainWindow):
         
         #blur(self.winId())
         
+
+
         #works for windowss probably but not linux
         #hWnd = self.winId()
         #print(hWnd)
