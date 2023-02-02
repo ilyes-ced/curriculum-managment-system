@@ -51,11 +51,12 @@ class MainWindow(QMainWindow):
 
 
         #works for windowss probably but not linux
-        hWnd = self.winId()
-        print(hWnd)
-        blur(hWnd)
-        myappid = 'ilyes.class_managment_system.subproduct.1.0.0' # arbitrary string
-        ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+	if platform == "win32":
+        	hWnd = self.winId()
+        	print(hWnd)
+        	blur(hWnd)
+        	myappid = 'ilyes.class_managment_system.subproduct.1.0.0' # arbitrary string
+        	ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
         
         #functions
