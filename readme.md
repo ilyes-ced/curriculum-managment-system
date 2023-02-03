@@ -6,9 +6,12 @@ an application for specific use custom made
 ## features
 
 - create a curriculum
-- add teachers
-- 
+- review curriculums for classes and teachers
+- add and remove teachers
 
+## Scrreenshots
+blur effect works on windows only
+![](images/main.png) 
 
 to run install with pip : BlurWindow and PySide6
 to run 
