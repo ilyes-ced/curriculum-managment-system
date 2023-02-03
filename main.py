@@ -1,7 +1,7 @@
 from re import I
 import sys
 from tokenize import Name
-from BlurWindow.blurWindow import blur
+from BlurWindow.blurWindow import blur, GlobalBlur
 from ui_main import Ui_MainWindow
 from dia2 import Ui_Dialog
 import ctypes
@@ -51,14 +51,26 @@ class MainWindow(QMainWindow):
 
 
         #works for windowss probably but not linux
-	if platform == "win32":
-        	hWnd = self.winId()
-        	print(hWnd)
-        	blur(hWnd)
-        	myappid = 'ilyes.class_managment_system.subproduct.1.0.0' # arbitrary string
-        	ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
+        if platform == "win32":
+            hWnd = self.winId()
+            print(hWnd)
+            blur(hWnd)
+            myappid = 'ilyes.class_managment_system.subproduct.1.0.0' # arbitrary string
+            ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
         
-        
+
+        print(self.winId())
+        GlobalBlur(self.winId(),Dark=True,QWidget=self)
+        #hWnd = self.winId()
+        #print(hWnd)
+        #blur(hWnd)
+
+
+
+
+
+
+
         #functions
         #self.ui.btn_extend.clicked.connect(self.side_bar_extend)
         self.ui.season_selection.currentTextChanged.connect(self.changed_selections)
